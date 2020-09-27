@@ -12,11 +12,13 @@ tar -zxvf source_file -C target_file
 
 
 
-### 搜索文件
+### 搜索文件位置
 
 > 1. locate : 从文件索引数据库（系统自动维护，每天更新一次）中查找文件，查找速度快
 > 2. which / whereis : 前者查找已经安装好的命令，后者查找文件索引数据库中的内容。
 > 3. find : 用于查找指定目录的文件，可以设置时间等参数。
+>    例如：
+>    `find /etc -name "ifg*"` 在/etc目录下查找以ifg开头的文件
 
 ### 配置环境变量
 > 1. `vim ~/.bashrc`

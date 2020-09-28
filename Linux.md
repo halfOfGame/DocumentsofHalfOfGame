@@ -173,11 +173,27 @@ tar -zxvf source_file -C target_file
 | :--------------------------------------: | :---------------------------------------: | :--: |
 |             网络服务配置文件             | /etc/sysconfig/network-scripts/ifcfg-eth0 |      |
 |           主机名和IP的映射文件           |                /etc/hosts                 |      |
-|             主机名称配置文件             |               /etc/hostname               |      |
+|             主机名称配置文件             |          /etc/sysconfig/network           |      |
 | 配置系统变量 或者 环境变量 或者 别名信息 |               /etc/profile                |      |
 |                                          |                                           |      |
 
 
+
+## 挂起进程的处理
+
+`jobs` 查看所有挂起的进程
+
+`kill %1` 杀死挂起的一号进程
+
+`jobs -l` 可以查看到进程号，然后用 `kill 进程号` 的方式杀死进程
+
+`fg 1`把一号进程放到前台执行，`bg 1` 把一号进程放到后台执行
+
+## 防火墙
+
+1. 查看防火墙状态 `systemctl status firewalld.service`
+2. 关闭防火墙 `systemctl stop firewalld.service`
+3. 永久关闭防火墙 `systemctl disable firewalld.service`
 
 ## 好用的命令
 
